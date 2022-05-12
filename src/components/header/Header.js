@@ -1,18 +1,14 @@
 import React from "react";
 
-const Header = () => {
-  
-  
-  
-  
+const Header = ({ handleSearch }) => {
+
+
   return (
     <nav className="navbar navbar-dark bg-dark">
       <div className="container-fluid">
         <span className="fw-bold fs-5 text-white mx-auto">NOTES_TRACKER</span>
 
-
-        <form className="d-flex">
-
+        <form className="d-flex" onSubmit={handleSearch}>
           <input
             className="form-control me-2"
             type="search"
@@ -27,9 +23,6 @@ const Header = () => {
       </div>
     </nav>
   );
-
-
-
 };
 
 export default Header;
